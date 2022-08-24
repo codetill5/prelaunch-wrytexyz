@@ -13,7 +13,7 @@ export default function Home() {
       </div>
       <h2>A Decentralized Publishing Platform</h2>
       <p>Launching 18 Sept🚀</p>
-      <a href="https://twitter.com/WryteXyz" target="_blank">
+      <a href="https://twitter.com/WryteXyz" target="_blank" rel="noreferrer">
       <div className="followContainer">
         <p>For more Updates - Follow </p>
         <img
