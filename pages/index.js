@@ -14,12 +14,12 @@ export default function Home() {
         <meta property="og:url" content="https://www.wryte.xyz/" />
         <meta property="og:title" content="Wryte - A Decentralized Publishing Platform" />
         <meta property="og:description" content="Wryte brings the power of web3 to your stories, making you the owner of your content" />
-        <meta property="og:image" content='/seoLogo.png' />
-        <meta property="og:image:secure_url" content='/seoLogo.png' />
+        <meta property="og:image" content='https://www.wryte.xyz/seoLogo.png' />
+        <meta property="og:image:secure_url" content='https://www.wryte.xyz/seoLogo.png' />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:title" content="Wryte - A Decentralized Publishing Platform" />
         <meta property="twitter:description" content="Wryte brings the power of web3 to your stories, making you the owner of your content" />
-        <meta property="twitter:image:src" content='/seoLogo.png' />
+        <meta property="twitter:image:src" content='https://www.wryte.xyz/seoLogo.png' />
       </Head>
       <div className="logo">
         <img src="/logo.gif" />
