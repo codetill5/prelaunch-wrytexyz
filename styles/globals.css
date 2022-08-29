@@ -27,3 +27,82 @@ a {
 text-decoration: none;
 color: #fff;
 }
+
+.earlyAccessBtn {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+}
+
+.btnContainer{
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.formInnerContainer{
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+}
+
+.formInnerContainer > label {
+  margin-top: 20px;
+  background-color: #000;
+}
+
+.formInnerContainer > input {
+  margin: 20px 0;
+  padding: 5px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+input::placeholder{
+  color: #fff;
+}
+
+.formInnerContainer > button{
+ background-color: #fff;
+ margin-bottom: 20px;
+ padding: 10px 0;
+}
+
+ .ReactModal__Content--after-open{
+  background-color: #000 !important;
+}
+
+.close{
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-color: #000;
+
+}
+
+.close > p {
+  margin: 0;
+}
