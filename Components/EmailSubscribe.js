@@ -39,26 +39,20 @@ const EmailSubscribe = () => {
           EMAIL: email,
         });
       setIsOpen(false);
+      setSuccessModal(true);
     };
 
     const openModal = () => {
       setIsOpen(true);
-    }
+    };
 
     const closeModal = () => {
       setIsOpen(false);
-    }
+    };
 
     const closeSuccessModal = () => {
       setSuccessModal(false);
     };
-
-    useEffect(() => {
-      if(status === 'success'){
-        setSuccessModal(true);
-        setIsOpen(false);
-      }
-    })
 
     return (
       <div>
@@ -98,17 +92,21 @@ const EmailSubscribe = () => {
           </form>
         </Modal>
         <Modal
-        isOpen={successModal}
-        onRequestClose={closeSuccessModal}
-        style={customStyles}
-      >
-        <span className="close" onClick={() => closeSuccessModal()}>
-            <p>x</p></span>
-        <div className="succesModal">
-       <div className="successModalHeader"><h1>Thank You</h1><img src="/heart.gif" /></div>
-       <h3>We'll email you soon</h3>
-       </div>
-      </Modal>
+          isOpen={successModal}
+          onRequestClose={closeSuccessModal}
+          style={customStyles}
+        >
+          <span className="close" onClick={() => closeSuccessModal()}>
+            <p>x</p>
+          </span>
+          <div className="succesModal">
+            <div className="successModalHeader">
+              <h1>Thank You</h1>
+              <img src="/heart.gif" />
+            </div>
+            <h3>We'll email you soon</h3>
+          </div>
+        </Modal>
       </div>
     );
   };

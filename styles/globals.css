@@ -126,6 +126,9 @@ input::placeholder{
   align-items: center;
   background-color: #000 !important;
 }
+.submitBtn{
+  cursor: pointer;
+}
 
 .successModalHeader > h1 {
   background-color: #000;
