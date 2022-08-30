@@ -106,3 +106,33 @@ input::placeholder{
 .close > p {
   margin: 0;
 }
+
+.succesModal{
+  color: #fff;
+  background-color: #000 !important;
+  text-align: center;
+}
+.succesModal > h1 {
+  padding: 0;
+  margin: 10px 0;
+}
+.succesModal > h1, h3 {
+  background-color: #000;
+}
+
+.successModalHeader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000 !important;
+}
+
+.successModalHeader > h1 {
+  background-color: #000;
+}
+
+.successModalHeader > img {
+  height: 50px;
+  width: 50px;
+  background-color: #000;
+}

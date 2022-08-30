@@ -21,6 +21,7 @@ Modal.defaultStyles.overlay.backgroundColor = "rgba(0, 0, 0, 0.65)";
 
 const EmailSubscribe = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [successModal, setSuccessModal] = useState(false);
   const postUrl = `${process.env.NEXT_PUBLIC_BASEURL_MAILCHIMP}?u=${process.env.NEXT_PUBLIC_MAILCHIMP_U}&id=${process.env.NEXT_PUBLIC_MAILCHIMP_ID}`;
 
   const CustomForm = ({ status, message, onValidated }) => {
@@ -37,6 +38,7 @@ const EmailSubscribe = () => {
         onValidated({
           EMAIL: email,
         });
+      setIsOpen(false);
     };
 
     const openModal = () => {
@@ -46,6 +48,17 @@ const EmailSubscribe = () => {
     const closeModal = () => {
       setIsOpen(false);
     }
+
+    const closeSuccessModal = () => {
+      setSuccessModal(false);
+    };
+
+    useEffect(() => {
+      if(status === 'success'){
+        setSuccessModal(true);
+        setIsOpen(false);
+      }
+    })
 
     return (
       <div>
@@ -84,6 +97,18 @@ const EmailSubscribe = () => {
             </div>
           </form>
         </Modal>
+        <Modal
+        isOpen={successModal}
+        onRequestClose={closeSuccessModal}
+        style={customStyles}
+      >
+        <span className="close" onClick={() => closeSuccessModal()}>
+            <p>x</p></span>
+        <div className="succesModal">
+       <div className="successModalHeader"><h1>Thank You</h1><img src="/heart.gif" /></div>
+       <h3>We'll email you soon</h3>
+       </div>
+      </Modal>
       </div>
     );
   };
